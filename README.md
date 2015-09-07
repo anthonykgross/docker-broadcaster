@@ -25,7 +25,7 @@ rtmp {
              #Add your accounts with API_KEY
              
              # With Twitch.tv, you can choose streaming server : Here Europe/Paris
-             #push rtmp://live-cdg.twitch.tv/app/<your_twitch_key>;
+             push rtmp://live-cdg.twitch.tv/app/<your_twitch_key>;
              
              #Hitbox
              #push rtmp://live.hitbox.tv/push/<your_hitbox_key>;
@@ -44,8 +44,10 @@ docker-compose up -d
 
 # Configure
 
-In OBS (Open Broadcast Software) or XplitBroadcaster, configure the RTMP serveur with : rtmp://your_ip_server:1935/transcode (If you want to transcode before broadcasting)
+In OBS (Open Broadcast Software) or XplitBroadcaster, configure the RTMP serveur with :
+```bash
+rtmp://your_ip_server:1935/transcode (If you want to transcode before broadcasting)
 or 
 rtmp://your_ip_server:1935/live (If you want only to broadcast)
-
+```
 
