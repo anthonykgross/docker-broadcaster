@@ -45,7 +45,18 @@ docker-compose up -d
 In OBS (Open Broadcast Software) or XplitBroadcaster, configure the RTMP server with :
 ```bash
 rtmp://your_ip_server:1935/transcode (If you want to transcode before broadcasting)
-or 
+or
 rtmp://your_ip_server:1935/live (If you want only to broadcast)
 ```
+
+## Creator
+
+**Anthony K GROSS**
+- <http://anthonykgross.fr>
+- <https://twitter.com/anthonykgross>
+- <https://github.com/anthonykgross>
+
+## Copyright and license
+
+Code and documentation copyright 2015. Code released under [the MIT license](https://github.com/kkuetnet/Harproject/blob/master/LICENSE).
 
