@@ -35,6 +35,8 @@ And it's finished ! Just run your container !
 
 ## Run
 Run the container with docker-compose
+
+in docker-broadcaster/
 ```js
 docker-compose up -d
 ```
