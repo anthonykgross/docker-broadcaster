@@ -1,0 +1,9 @@
+broadcaster:
+  image: akg_broadcaster:latest
+  ports:
+    - 80:80
+    - 1935:1935
+  volumes:
+    - ./conf/nginx/nginx.conf:/usr/local/nginx-streaming/conf/new-nginx.conf
+    - ./conf/supervisor/conf.d:/etc/supervisor/conf.d
+    - ./logs:/var/logs
