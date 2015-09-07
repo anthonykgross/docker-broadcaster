@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-echo -n "anthonykgross/stream123456789" | openssl dgst -md5 -binary | openssl enc -base64 | tr '+/' '-_' | tr -d '='
+#echo -n "anthonykgross/stream123456789" | openssl dgst -md5 -binary | openssl enc -base64 | tr '+/' '-_' | tr -d '='
 
 mkdir nginx
 cd nginx
