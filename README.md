@@ -58,7 +58,7 @@ rtmp://your_ip_server:1935/live (If you want only to broadcast)
 - <https://github.com/anthonykgross>
 
 ## Contributor
-**Gregory GROSS**
+**Gregory GROSS** 
 I would like to thank my brother for his idea and to help me to develop this image. I hope that he will be broadcast his stream for each platform without bugs :)
 
 ## Copyright and license
