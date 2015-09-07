@@ -3,11 +3,18 @@ This image allows you to broadcast your stream to several live streaming video p
 
 # HOW TO USE
 
-## Configure your accounts
+## Get docker-broadcaster
+
+Download the repository on your public server.
+```bash
+$ apt-get install git # For debian
+$ git clone https://github.com/anthonykgross/docker-broadcaster.git
+$ cd docker-broadcaster/
+```
+
 ## Configure your accounts
 
 in conf/nginx/nginx.conf
-
 ```js
 ...
 rtmp {
@@ -28,11 +35,17 @@ rtmp {
 ```
 And it's finished ! Just run your container !
 
-## 
+## Run
 
+Run the container with docker-compose
 ```js
-docker-compose up
+docker-compose up -d
 ```
 
+# Configure
+
+In OBS (Open Broadcast Software) or XplitBroadcaster, configure the RTMP serveur with : rtmp://your_ip_server:1935/transcode (If you want to transcode before broadcasting)
+or 
+rtmp://your_ip_server:1935/live (If you want only to broadcast)
 
 
