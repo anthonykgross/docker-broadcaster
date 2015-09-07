@@ -1,7 +1,7 @@
 # What is Anthonykgross/Docker-broadcaster ?
 This image allows you to broadcast your stream to several live streaming video platforms (Twitch, Hitbox and others soon) in the same time. Just broadcast your stream to your container and it will broadcast to your favorites platforms.
 
-# HOW TO USE - With docker-compose
+# How to use with docker-compose
 
 ## Get docker-broadcaster
 Download the repository on your public server.
