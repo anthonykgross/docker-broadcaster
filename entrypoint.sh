@@ -64,8 +64,9 @@ token=$(echo -n "$PRIVATE_KEY/stream$expire" | openssl dgst -md5 -binary |
 formatted_date=$(date --date="@$expire" +"%m-%d-%Y %r")
 
 echo "="
-echo "= URL live            = rtmp://$YOUR_IP:1935/$URL_LIVE/stream?e=$expire&st=$token"
-echo "= URL transcode       = rtmp://$YOUR_IP:1935/$URL_TRANSCODE/stream?e=$expire&st=$token"
+echo "= URL live            = rtmp://$YOUR_IP:1935/$URL_LIVE/"
+echo "= URL transcode       = rtmp://$YOUR_IP:1935/$URL_TRANSCODE/"
+echo "= Stream Key          = stream?e=$expire&st=$token"
 echo "= Expiration token    = $formatted_date (in $EXPIRATION_TOKEN sec.)                                          "
 echo "="
 echo "==============================================================================================="

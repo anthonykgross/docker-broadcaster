@@ -1,3 +1,3 @@
 #/bin/bash
 
-docker build --file="Dockerfile" --tag="akg_broadcaster:latest" .
+docker build --file="Dockerfile" --tag="anthonykgross/docker-broadcaster" .
