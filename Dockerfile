@@ -28,10 +28,12 @@ ENV PRIVATE_KEY anthonykgross
 ENV STREAM_SPECIFIER hd720
 ENV URL_TRANSCODE transcode
 ENV URL_LIVE live
-
+ENV EXPIRATION_TOKEN 3600
 
 RUN mkdir /conf
 ADD ./conf /conf
+RUN mkdir /log
+RUN chmod 777 /log -Rf
 
 RUN mkdir nginx && \
 	cd nginx && \

@@ -11,6 +11,7 @@ broadcaster:
 #    DAILYMOTION_STREAMKEY: "NULL"
 #    YOUR_IP: YOUR_IP
 #    PRIVATE_KEY: anthonykgross
+#    EXPIRATION_TOKEN: 3600
 #    STREAM_SPECIFIER: hd720
 #    URL_TRANSCODE: transcode
 #    URL_LIVE: live
@@ -18,4 +19,4 @@ broadcaster:
     - 8080:8080
     - 1935:1935
   volumes:
-    - ./log:/var/log
+    - ./log:/log
