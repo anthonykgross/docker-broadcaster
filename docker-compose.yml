@@ -1,10 +1,21 @@
 broadcaster:
   image: akg_broadcaster:latest
+#  environment:
+#    YOUTUBE_URL: rtmp://a.rtmp.youtube.com/live2
+#    YOUTUBE_STREAMKEY: "NULL"
+#    TWITCH_URL: rtmp://live-cdg.twitch.tv/app
+#    TWITCH_STREAMKEY: "NULL"
+#    HITBOX_URL: rtmp://live.hitbox.tv/push
+#    HITBOX_STREAMKEY: "NULL"
+#    DAILYMOTION_URL: rtmp://publish.dailymotion.com/publish-dm
+#    DAILYMOTION_STREAMKEY: "NULL"
+#    YOUR_IP: YOUR_IP
+#    PRIVATE_KEY: anthonykgross
+#    STREAM_SPECIFIER: hd720
+#    URL_TRANSCODE: transcode
+#    URL_LIVE: live
   ports:
-    - 80:80
     - 8080:8080
     - 1935:1935
   volumes:
-    - ./conf/nginx/nginx.conf:/usr/local/nginx-streaming/conf/new-nginx.conf
-    - ./conf/supervisor/conf.d:/etc/supervisor/conf.d
-    - ./logs:/var/logs
+    - ./log:/var/log
