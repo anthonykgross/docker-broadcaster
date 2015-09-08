@@ -59,11 +59,10 @@ fi
 
 today=$(date +%s)
 expire=$(($today+$EXPIRATION_TOKEN))
-token=$(echo -n "$PRIVATE_KEY/stream1370781049" | openssl dgst -md5 -binary | 
+token=$(echo -n "$PRIVATE_KEY/stream$expire" | openssl dgst -md5 -binary | 
          openssl enc -base64 | tr '+/' '-_' | tr -d '=')
 formatted_date=$(date --date="@$expire" +"%m-%d-%Y %r")
 
-echo $formatted_date
 echo "="
 echo "= URL live            = rtmp://$YOUR_IP:1935/$URL_LIVE/stream?e=$expire&st=$token"
 echo "= URL transcode       = rtmp://$YOUR_IP:1935/$URL_TRANSCODE/stream?e=$expire&st=$token"
