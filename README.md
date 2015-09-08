@@ -13,26 +13,22 @@ $ git clone https://github.com/anthonykgross/docker-broadcaster.git
 $ cd docker-broadcaster/
 ```
 
-### Configure your accounts
-in conf/nginx/nginx.conf
-```js
-...
-rtmp {
-    server {
-        ...
-        application live {
-             ...
-             #Add your accounts with API_KEY
-             
-             # With Twitch.tv, you can choose streaming server : Here Europe/Paris
-             push rtmp://live-cdg.twitch.tv/app/<your_twitch_key>;
-             
-             #Hitbox
-             #push rtmp://live.hitbox.tv/push/<your_hitbox_key>;
-        }
-    }
-}
-```
+### Parameters
+- YOUTUBE_URL (default : rtmp://a.rtmp.youtube.com/live2) 
+- YOUTUBE_STREAMKEY (default : "NULL")
+- TWITCH_URL (default : rtmp://live-cdg.twitch.tv/app)
+- TWITCH_STREAMKEY (default : "NULL")
+- HITBOX_URL (default :rtmp://live.hitbox.tv/push
+- HITBOX_STREAMKEY (default : "NULL")
+- DAILYMOTION_URL (default : rtmp://publish.dailymotion.com/publish-dm)
+- DAILYMOTION_STREAMKEY (default :"NULL")
+- YOUR_IP (default : YOUR_IP)
+- PRIVATE_KEY (default : anthonykgross)
+- EXPIRATION_TOKEN (default : 3600)
+- STREAM_SPECIFIER (default : hd720)
+- URL_TRANSCODE (default : transcode)
+- URL_LIVE (default : live)
+
 And it's finished ! Just run your container !
 
 ### Run
