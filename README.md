@@ -15,6 +15,7 @@ $ cd docker-broadcaster/
 
 ### Parameters
 - YOUTUBE_URL (default : rtmp://a.rtmp.youtube.com/live2) 
+- - ddd
 - YOUTUBE_STREAMKEY (default : "NULL")
 - TWITCH_URL (default : rtmp://live-cdg.twitch.tv/app)
 - TWITCH_STREAMKEY (default : "NULL")
