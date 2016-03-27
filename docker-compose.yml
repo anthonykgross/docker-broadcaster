@@ -9,6 +9,8 @@ broadcaster:
 #    HITBOX_STREAMKEY: "NULL"
 #    DAILYMOTION_URL: rtmp://publish.dailymotion.com/publish-dm
 #    DAILYMOTION_STREAMKEY: "NULL"
+#    LIVECODING_URL: rtmp://eumedia1.livecoding.tv:1935/livecodingtv
+#    LIVECODING_STREAMKEY: "NULL"
 #    YOUR_IP: YOUR_IP
 #    PRIVATE_KEY: anthonykgross
 #    EXPIRATION_TOKEN: 3600
