@@ -7,6 +7,12 @@ Features include:
 
 # How to use 
 
+##Prerequisites
+Add your user to docker group to be able to use it with non root user: 
+```console
+$ sudo usermod -aG docker username
+```
+
 ## Get docker-broadcaster
 Download the repository on your public server.
 ```console

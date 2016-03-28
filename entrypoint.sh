@@ -10,6 +10,7 @@ sed -i -e "s,<twitch_url>,$TWITCH_URL,g" /usr/local/nginx-streaming/conf/nginx.c
 sed -i -e "s,<hitbox_url>,$HITBOX_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
 sed -i -e "s,<youtube_url>,$YOUTUBE_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
 sed -i -e "s,<dailymotion_url>,$DAILYMOTION_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
+sed -i -e "s,<livecoding_url>,$LIVECODING_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
 
 echo "==============================================================================================="
 echo "="
@@ -55,6 +56,17 @@ then
 else
 	echo "= DAILYMOTION_STREAMKEY : NOT FOUND!"
 	sed -i -e "s,<dailymotion_active>,#,g" /usr/local/nginx-streaming/conf/nginx.conf
+fi
+
+if [[ $LIVECODING_STREAMKEY != "NULL" ]]
+then
+    echo "= LIVECODING_STREAMKEY : $LIVECODING_STREAMKEY"
+    sed -i -e "s,<livecoding_active>, ,g" /usr/local/nginx-streaming/conf/nginx.conf
+    sed -i -e "s,<livecoding_streamkey>,$LIVECODING_STREAMKEY,g" /usr/local/nginx-streaming/conf/nginx.conf
+    
+else
+	echo "= LIVECODING_STREAMKEY : NOT FOUND!"
+	sed -i -e "s,<livecoding_active>,#,g" /usr/local/nginx-streaming/conf/nginx.conf
 fi
 
 today=$(date +%s)
