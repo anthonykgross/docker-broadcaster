@@ -7,6 +7,8 @@ Features include:
 
 # How to use 
 
+You can read my post about it (French) : http://anthonykgross.fr/p/multi-streaming-broadcaster-twitch-youtube-dailymotion-hitbox 
+
 ##Prerequisites
 Add your user to docker group to be able to use it with non root user: 
 ```console
