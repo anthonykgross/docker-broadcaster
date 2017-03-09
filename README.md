@@ -1,4 +1,4 @@
-[![Docker pulls](https://img.shields.io/docker/pulls/library/docker-broadcaster.svg)](https://hub.docker.com/r/anthonykgross/docker-broadcaster/)
+[![Docker pulls](https://img.shields.io/docker/pulls/anthonykgross/docker-broadcaster.svg)](https://hub.docker.com/r/anthonykgross/docker-broadcaster/)
 
 # What is Anthonykgross/Docker-broadcaster ?
 This image allows you to broadcast your stream to several live streaming video platforms (Twitch, Hitbox, Youtube and Dailymotion) in the same time. Just broadcast your stream to your container and it will broadcast to your favorites platforms.
