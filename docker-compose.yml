@@ -22,3 +22,4 @@ broadcaster:
     - 1935:1935
   volumes:
     - ./log:/log
+    - ./mnt:/mnt
