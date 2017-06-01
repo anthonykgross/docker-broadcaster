@@ -31,9 +31,6 @@ ENV URL_TRANSCODE transcode
 ENV URL_LIVE live
 ENV EXPIRATION_TOKEN 3600
 
-ADD ./conf /conf
-ADD entrypoint.sh /entrypoint.sh
-
 RUN mkdir -p /conf && \
     mkdir -p /log && \
     chmod 777 /log -Rf  && \
@@ -45,12 +42,17 @@ RUN mkdir -p /conf && \
 	cd nginx-1.12.0 && \
 	./configure --add-module=/src/nginx/nginx-rtmp-module --with-http_ssl_module --with-http_secure_link_module --prefix=/usr/local/nginx-streaming && \
     make && \
-	make install  && \
-    cp /conf/nginx/nginx.conf /usr/local/nginx-streaming/conf/nginx.conf -f  && \
+	make install && \
+	rm /src/* -Rf
+
+ADD ./conf /conf
+ADD entrypoint.sh /entrypoint.sh
+
+RUN cp /conf/nginx/nginx.conf /usr/local/nginx-streaming/conf/nginx.conf -f  && \
     cp /conf/supervisor/conf.d/supervisor.conf /etc/supervisor/conf.d/supervisor.conf -f && \
     chmod +x /entrypoint.sh
 
-EXPOSE 8080
+EXPOSE 80
 EXPOSE 1935
 
 ENTRYPOINT ["/entrypoint.sh"]

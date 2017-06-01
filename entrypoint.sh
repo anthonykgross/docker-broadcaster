@@ -85,6 +85,8 @@ run() {
     echo "= Expiration token    = $formatted_date (in $EXPIRATION_TOKEN sec.)                                          "
     echo "="
     echo "==============================================================================================="
+
+    chown docker /src -Rf
     supervisord
 }
 
