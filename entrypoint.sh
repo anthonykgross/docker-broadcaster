@@ -79,6 +79,7 @@ run() {
     formatted_date=$(date --date="@$expire" +"%m-%d-%Y %r")
 
     echo "="
+    echo "= Mobile files        = http://$YOUR_IP/"
     echo "= URL live            = rtmp://$YOUR_IP:1935/$URL_LIVE/"
     echo "= URL transcode       = rtmp://$YOUR_IP:1935/$URL_TRANSCODE/"
     echo "= Stream Key          = stream?e=$expire&st=$token"
