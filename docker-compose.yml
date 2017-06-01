@@ -18,7 +18,8 @@ broadcaster:
 #    URL_TRANSCODE: transcode
 #    URL_LIVE: live
   ports:
-    - 8080:8080
+    - 80:80
     - 1935:1935
   volumes:
     - ./log:/log
+    - ./mnt:/mnt
