@@ -111,5 +111,5 @@ stream?e=1441722597&st=wxcwxcazeee
 - Thank you for my promote ! [Kalyzee - Video Interactive](http://www.kalyzee.com/)
 
 ## Copyright and license
-Code and documentation copyright 2015. Code released under [the MIT license](https://github.com/kkuetnet/Harproject/blob/master/LICENSE).
+Code and documentation copyright 2015. Code released under [the MIT license](https://github.com/anthonykgross/docker-broadcaster/blob/master/LICENSE).
 
