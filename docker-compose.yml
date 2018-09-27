@@ -1,5 +1,5 @@
 broadcaster:
-  image: anthonykgross/docker-broadcaster
+  image: anthonykgross/docker-broadcaster:master
 #  environment:
 #    YOUTUBE_URL: rtmp://a.rtmp.youtube.com/live2
 #    YOUTUBE_STREAMKEY: "NULL"
