@@ -47,6 +47,8 @@ $ docker-compose up -d
  * Set your Stream RTMP from Dailymotion. 
 - **DAILYMOTION_STREAMKEY** (default :"NULL")
  * Set your Stream RTMP from Dailymotion. 
+- **FACEBOOK_STREAMKEY** (default :"NULL")
+ * Set your Stream RTMP from Facebook. 
 - **YOUR_IP** (default : "YOUR_IP")
  * Set your server's IP : Only useful in docker's logs. 
 - **PRIVATE_KEY** (default : "anthonykgross")
@@ -74,6 +76,7 @@ broadcaster_1 | = TWITCH_STREAMKEY      : live_101724967_qLZMlwnxxpKqsqsfJ5lNcBc
 broadcaster_1 | = HITBOX_STREAMKEY      : qsfqf?key=Jn6Dsqdqsd8cpx
 broadcaster_1 | = YOUTUBE_STREAMKEY     : poopaplla-7537.ea0k-ef3-czsz
 broadcaster_1 | = DAILYMOTION_STREAMKEY : 24646?auth=qeGP_9fb42e109944fa5b504e191
+broadcaster_1 | = FACEBOOK_STREAMKEY    : 12312385213123?s_bl=1&s_ps=1&s_sw=0&s_vt=api-s&a=AbyDXs7sMdsygq50
 broadcaster_1 | =
 broadcaster_1 | = URL live            = rtmp://xxx.xxx.xxx.xxx:1935/live/
 broadcaster_1 | = URL transcode       = rtmp://xxx.xxx.xxx.xxx:1935/transcode/
