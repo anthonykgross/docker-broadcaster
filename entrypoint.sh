@@ -13,6 +13,7 @@ run() {
     sed -i -e "s,<hitbox_url>,$HITBOX_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
     sed -i -e "s,<youtube_url>,$YOUTUBE_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
     sed -i -e "s,<dailymotion_url>,$DAILYMOTION_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
+    sed -i -e "s,<facebook_url>,$FACEBOOK_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
     sed -i -e "s,<livecoding_url>,$LIVECODING_URL,g" /usr/local/nginx-streaming/conf/nginx.conf
 
     echo "==============================================================================================="
@@ -59,6 +60,17 @@ run() {
     else
         echo "= DAILYMOTION_STREAMKEY : NOT FOUND!"
         sed -i -e "s,<dailymotion_active>,#,g" /usr/local/nginx-streaming/conf/nginx.conf
+    fi
+
+    if [[ $FACEBOOK_STREAMKEY != "NULL" ]]
+    then
+        echo "= FACEBOOK_STREAMKEY : $FACEBOOK_STREAMKEY"
+        sed -i -e "s,<facebook_active>, ,g" /usr/local/nginx-streaming/conf/nginx.conf
+        sed -i -e "s,<facebook_streamkey>,$FACEBOOK_STREAMKEY,g" /usr/local/nginx-streaming/conf/nginx.conf
+
+    else
+        echo "= FACEBOOK_STREAMKEY : NOT FOUND!"
+        sed -i -e "s,<facebook_active>,#,g" /usr/local/nginx-streaming/conf/nginx.conf
     fi
 
     if [[ $LIVECODING_STREAMKEY != "NULL" ]]

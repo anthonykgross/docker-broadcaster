@@ -24,12 +24,20 @@ ENV DAILYMOTION_STREAMKEY NULL
 ENV LIVECODING_URL rtmp://eumedia1.livecoding.tv:1935/livecodingtv
 ENV LIVECODING_STREAMKEY NULL
 
+ENV FACEBOOK_URL rtmp://127.0.0.1:19350/rtmp
+ENV FACEBOOK_STREAMKEY NULL
+
 ENV YOUR_IP YOUR_IP
 ENV PRIVATE_KEY anthonykgross
 ENV STREAM_SPECIFIER hd720
 ENV URL_TRANSCODE transcode
 ENV URL_LIVE live
 ENV EXPIRATION_TOKEN 3600
+
+RUN apt-get update && \
+    apt-get install -y ca-certificates openssl libssl-dev stunnel vim&& \
+    rm -rf /var/lib/apt/lists/* &&\
+    mkdir -p /etc/stunnel/conf.d/
 
 RUN mkdir -p /conf && \
     mkdir -p /log && \
@@ -50,6 +58,9 @@ ADD entrypoint.sh /entrypoint.sh
 
 RUN cp /conf/nginx/nginx.conf /usr/local/nginx-streaming/conf/nginx.conf -f  && \
     cp /conf/supervisor/conf.d/supervisor.conf /etc/supervisor/conf.d/supervisor.conf -f && \
+    cp /conf/stunnel/fb.conf /etc/stunnel/conf.d/fb.conf -f && \
+    cp /conf/stunnel/stunnel4 /etc/default/stunnel4 -f && \
+    cp /conf/stunnel/stunnel.conf /etc/stunnel/stunnel.conf -f && \
     chmod +x /entrypoint.sh
 
 EXPOSE 80
